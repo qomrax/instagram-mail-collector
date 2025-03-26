@@ -1,0 +1,48 @@
+{
+    "response": {
+        "errors": [
+            {
+                "message": "execution error",
+                "path": [
+                    "xdt_api__v1__discover__chaining"
+                ],
+                "severity": "CRITICAL"
+            }
+        ],
+        "data": null,
+        "extensions": {
+            "is_final": true
+        },
+        "status": "ok"
+    },
+    "params": {
+        "av": 17841404925108674,
+        "__d": "www",
+        "__user": 0,
+        "__a": 1,
+        "__req": 7,
+        "__hs": "20171.HYP:instagram_web_pkg.2.1...1",
+        "dpr": 2,
+        "__ccg": "POOR",
+        "__rev": 1021182012,
+        "__s": "zk8764:hqbrm1:jj13ee",
+        "__hsi": 7485355599817552000,
+        "__dyn": "7xeUjG1mxu1syUbFp41twpUnwgU7SbzEdF8aUco2qwJxS0DU2wx609vCwjE1EE2Cw8G11wBz81s8hwGxu786a3a1YwBgao6C0Mo2swtUd8-U2zxe2GewGw9a361qw8Xxm16wUwtE1wEbUGdG1QwTU9UaQ0Lo6-3u2WE5B08-269wr86C1mwPwUQp1yUb8jK5V8aUuwm8jxK2K0P8KmUhw",
+        "__csr": "jgnMkhsYJi9sW9bnFGjrKHSZivnl4l6aqFFdqiUFqWaDV5Dlu4UkGjVXL8AaXVvAXvzpktrWiLSWjVuKBZeVXxiuEgKnimbxWkK4qDyt2Q8gyVokAVp8SAeyoDy9kXz4EC9AmdF4AgOp4AVolF39p89kfLAmAvm9xiE9p8mKUCm6UlxrDxe00iLMwco1O40cIwkS2eEC8zUWSEC0EQ050U1Do1QU0-S210DwUx8jbEU38AgKqi0gUwG0bawfQMft2EJ1a2tw-glU8U0gPxeGbgboeuiq5hpk8hk01HPw6NwfW",
+        "__comet_req": 7,
+        "fb_dtsg": "NAcM9ONKHvlbsMhg-LCcgZ0YrbZycnFf-DMqoVM-krrb5JKhPItZG_g:17864863018060157:1737419604",
+        "jazoest": 26338,
+        "lsd": "A1o7SxF4Owio6NSB0Xw665",
+        "__spin_r": 1021182012,
+        "__spin_b": "trunk",
+        "__spin_t": 1742820162,
+        "fb_api_caller_class": "RelayModern",
+        "fb_api_req_friendly_name": "PolarisProfileSuggestedUsersWithPreloadableQuery",
+        "variables": {
+            "module": "profile",
+            "target_id": "10153455091"
+        },
+        "server_timestamps": true,
+        "doc_id": 8787138138058098
+    }
+}

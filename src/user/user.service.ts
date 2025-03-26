@@ -1,17 +1,17 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { User } from 'src/user/user.entity';
+import { UserEntity } from 'src/user/user.entity';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UserService {
     constructor(
-        @InjectRepository(User)
-        private userRepository: Repository<User>,
+        @InjectRepository(UserEntity)
+        private userRepository: Repository<UserEntity>,
     ) { }
 
-    async create(user: Partial<User>): Promise<User> {
+    async create(user: Partial<UserEntity>): Promise<UserEntity> {
         const hashedPassword = await bcrypt.hash(user.password, 10);
         const newUser = this.userRepository.create({
             ...user,
@@ -20,28 +20,28 @@ export class UserService {
         return this.userRepository.save(newUser);
     }
 
-    async findAll(): Promise<User[]> {
+    async findAll(): Promise<UserEntity[]> {
         return this.userRepository.find();
     }
 
-    async findOne(ID: number): Promise<User> {
-        const user = await this.userRepository.findOne({ where: { ID } });
+    async findOne(id: number): Promise<UserEntity> {
+        const user = await this.userRepository.findOne({ where: { id: id } });
         if (!user) {
             throw new NotFoundException('User not found');
         }
         return user;
     }
 
-    async findOneByEmail(email: string): Promise<User | undefined> {
+    async findOneByEmail(email: string): Promise<UserEntity | undefined> {
         return this.userRepository.findOne({ where: { email } });
     }
 
-    async update(ID: number, updateUser: Partial<User>): Promise<User> {
-        await this.userRepository.update(ID, updateUser);
-        return this.userRepository.findOne({ where: { ID } });
+    async update(id: number, updateUser: Partial<UserEntity>): Promise<UserEntity> {
+        await this.userRepository.update(id, updateUser);
+        return this.userRepository.findOne({ where: { id: id } });
     }
 
-    async remove(ID: number): Promise<void> {
-        await this.userRepository.delete(ID);
+    async remove(id: number): Promise<void> {
+        await this.userRepository.delete(id);
     }
 }

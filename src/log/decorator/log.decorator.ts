@@ -1,4 +1,3 @@
-// src/logging/decorators/log-method.decorator.ts
 import { LogService } from '../log.service';
 
 export function LogMethod() {
@@ -20,18 +19,14 @@ export function LogMethod() {
             }
 
             try {
-                // Log method entry
                 await logService.logMethodEntry(className, propertyKey, args);
 
-                // Execute original method
                 const result = await originalMethod.apply(this, args);
 
-                // Log method exit
                 await logService.logMethodExit(className, propertyKey, result);
 
                 return result;
             } catch (error) {
-                // Log error
                 await logService.logError(className, propertyKey, args, error);
                 throw error;
             }

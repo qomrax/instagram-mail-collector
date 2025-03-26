@@ -1,0 +1,83 @@
+{
+    "response": {
+        "data": {
+            "highlights": {
+                "edges": [
+                    {
+                        "node": {
+                            "id": "highlight:18225682615108194",
+                            "title": "🤨",
+                            "cover_media": {
+                                "cropped_image_version": {
+                                    "url": "https://scontent-lhr6-1.cdninstagram.com/v/t51.2885-15/275515423_949348485705502_1546902628160768443_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=scontent-lhr6-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2QHaMxbQD_otD2ndLO_n8BGwTRmetXKI5jKNrsEalCYZtsYm-9hoXVoJFbnhQJoJoPQ&_nc_ohc=sWt2c7KlkZQQ7kNvgFYUdej&_nc_gid=FgQ4TZhY0Mmi8dLtCDaylg&edm=AGXveE0BAAAA&ccb=7-5&oh=00_AYHBXCdh53z2eCpn-z-IoGvszAV6WXixc5mhiv5nCpn3Rg&oe=67E71917&_nc_sid=522435"
+                                }
+                            },
+                            "user": {
+                                "username": "geniuskender",
+                                "id": "10153455091"
+                            },
+                            "__typename": "XDTReelDict"
+                        },
+                        "cursor": ""
+                    },
+                    {
+                        "node": {
+                            "id": "highlight:18268917127015580",
+                            "title": "socials",
+                            "cover_media": {
+                                "cropped_image_version": {
+                                    "url": "https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/265279016_3046368052267892_3850756101518179327_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2QHaMxbQD_otD2ndLO_n8BGwTRmetXKI5jKNrsEalCYZtsYm-9hoXVoJFbnhQJoJoPQ&_nc_ohc=U_xXoz-97kwQ7kNvgG-1ASx&_nc_gid=FgQ4TZhY0Mmi8dLtCDaylg&edm=AGXveE0BAAAA&ccb=7-5&oh=00_AYHdaTKy_QQqOCD4CLgly7ATFzIf_C_Guhw1CNONNhlX5A&oe=67E7214D&_nc_sid=522435"
+                                }
+                            },
+                            "user": {
+                                "username": "geniuskender",
+                                "id": "10153455091"
+                            },
+                            "__typename": "XDTReelDict"
+                        },
+                        "cursor": ""
+                    }
+                ],
+                "page_info": {
+                    "end_cursor": null,
+                    "has_next_page": false,
+                    "has_previous_page": false,
+                    "start_cursor": null
+                }
+            }
+        },
+        "extensions": {
+            "is_final": true
+        },
+        "status": "ok"
+    },
+    "params": {
+        "av": 17841404925108674,
+        "__d": "www",
+        "__user": 0,
+        "__a": 1,
+        "__req": 6,
+        "__hs": "20171.HYP:instagram_web_pkg.2.1...1",
+        "dpr": 2,
+        "__ccg": "POOR",
+        "__rev": 1021182012,
+        "__s": "zk8764:hqbrm1:jj13ee",
+        "__hsi": 7485355599817552000,
+        "__dyn": "7xeUjG1mxu1syUbFp41twpUnwgU7SbzEdF8aUco2qwJxS0DU2wx609vCwjE1EE2Cw8G11wBz81s8hwGxu786a3a1YwBgao6C0Mo2swtUd8-U2zxe2GewGw9a361qw8Xxm16wUwtE1wEbUGdG1QwTU9UaQ0Lo6-3u2WE5B08-269wr86C1mwPwUQp1yUb8jK5V8aUuwm8jxK2K0P8KmUhw",
+        "__csr": "jgnMkhsYJi9sW9bnFGjrKHSZivnl4l6aqFFdqiUFqWaDV5Dlu4UkGjVXL8AaXVvAXvzpktrWiLSWjVuKBZeVXxiuEgKnimbxWkK4qDyt2Q8gyVokAVp8SAeyoDy9kXz4EC9AmdF4AgOp4AVolF39p89kfLAmAvm9xiE9p8mKUCm6UlxrDxe00iLMwco1O40cIwkS2eEC8zUWSEC0EQ050U1Do1QU0-S210DwUx8jbEU38AgKqi0gUwG0bawfQMft2EJ1a2tw-glU8U0gPxeGbgboeuiq5hpk8hk01HPw6NwfW",
+        "__comet_req": 7,
+        "fb_dtsg": "NAcM9ONKHvlbsMhg-LCcgZ0YrbZycnFf-DMqoVM-krrb5JKhPItZG_g:17864863018060157:1737419604",
+        "jazoest": 26338,
+        "lsd": "A1o7SxF4Owio6NSB0Xw665",
+        "__spin_r": 1021182012,
+        "__spin_b": "trunk",
+        "__spin_t": 1742820162,
+        "fb_api_caller_class": "RelayModern",
+        "fb_api_req_friendly_name": "PolarisProfileStoryHighlightsTrayContentQuery",
+        "variables": {
+            "user_id": "10153455091"
+        },
+        "server_timestamps": true,
+        "doc_id": 8198469583554901
+    }
+}

@@ -1,5 +1,5 @@
 import { Transform, Type } from "class-transformer";
-import { IsNumber, IsString, IsIn, IsArray } from "class-validator";
+import { IsNumber, IsString, IsIn, IsArray, IsBoolean } from "class-validator";
 
 export const ENV_VALUES = ["test", "production", "development"] as const;
 export type ENV_VALUES = (typeof ENV_VALUES)[number];
@@ -48,4 +48,9 @@ export class ENV {
     @Transform(({ value }) => value.split(","))
     CORS_ALLOWED_URLS: string[]
 
+    @IsString()
+    RAPID_API_KEY: string
+
+    @IsBoolean()
+    DISABLE_CONSOLE_LOGS: boolean
 }

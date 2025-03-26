@@ -9,6 +9,11 @@ import { UserModule } from './user/user.module';
 import { SettingModule } from './setting/setting.module';
 import { ConstantModule } from './constant/constant.module';
 import { LogModule } from './log/log.module';
+import { ConstantService } from './constant/constant.service';
+import { ApiModule } from './api/api.module';
+import { EmailModule } from './email/email.module';
+import { RobotModule } from './robot/robot.module';
+import { CommonModule } from './common/common.module';
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
@@ -40,9 +45,13 @@ import { LogModule } from './log/log.module';
     SettingModule,
     ConstantModule,
     LogModule,
+    ApiModule,
+    EmailModule,
+    RobotModule,
+    CommonModule,
   ],
   controllers: [],
-  providers: [EnvService],
+  providers: [EnvService, ConstantService],
 })
 export class AppModule {
   constructor(private envService: EnvService) { }

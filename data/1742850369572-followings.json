@@ -1,0 +1,104 @@
+{
+    "response": {
+        "data": {
+            "user": {
+                "friendship_status": {
+                    "following": false,
+                    "blocking": false,
+                    "is_feed_favorite": false,
+                    "outgoing_request": false,
+                    "followed_by": false,
+                    "incoming_request": false,
+                    "is_restricted": false,
+                    "is_bestie": false,
+                    "muting": false,
+                    "is_muting_reel": false
+                },
+                "gating": null,
+                "is_memorialized": false,
+                "is_private": false,
+                "has_story_archive": null,
+                "supervision_info": null,
+                "is_regulated_c18": false,
+                "regulated_news_in_locations": [],
+                "bio_links": [
+                    {
+                        "image_url": "",
+                        "is_pinned": false,
+                        "link_type": "external",
+                        "lynx_url": "https://l.instagram.com/?u=https%3A%2F%2Fanket.tubitak.gov.tr%2Findex.php%2F581289%3Flang%3Dtr%26fbclid%3DPAZXh0bgNhZW0CMTEAAaYjtJtjC6vdPAK2nbMmExY1WD8LbZGoGDtUgHxnGZUbDIW71hHsLuRAgO0_aem_YJHBE5HTd2XmC9yapFlChQ&e=AT3L8eEkDqKlyLHriOiANdIR9Z9nAxqVuoKG4yoKsdn8_GdRkVBPC_ExONtSX6LJIeMjx2KVmiG6FaI4WrACHKfsSUEiCoUexQTvQQ",
+                        "media_type": "none",
+                        "title": "Anket",
+                        "url": "https://anket.tubitak.gov.tr/index.php/581289?lang=tr"
+                    }
+                ],
+                "text_post_app_badge_label": null,
+                "show_text_post_app_badge": null,
+                "username": "dergipark",
+                "text_post_new_post_count": null,
+                "pk": "7201703963",
+                "live_broadcast_visibility": null,
+                "live_broadcast_id": null,
+                "profile_pic_url": "https://instagram.fkya5-1.fna.fbcdn.net/v/t51.2885-19/468121113_860165372959066_7318843590956148858_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=instagram.fkya5-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QHJCVlRH68BcZLG97jc7RdH-9Itj0pFOKDQwAOTO4km9jn0JY9PjzEh0z5YfhRZWU8&_nc_ohc=9TctHqt2uBwQ7kNvgFkZF3e&_nc_gid=0chWUEOqz98z2Vgoop-1gw&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYG51cXR_ziCHN79c09ptb7c6Mot4-pcsB9U-Zb2koJtAA&oe=67E788EC&_nc_sid=7d3ac5",
+                "hd_profile_pic_url_info": {
+                    "url": "https://instagram.fkya5-1.fna.fbcdn.net/v/t51.2885-19/468121113_860165372959066_7318843590956148858_n.jpg?_nc_ht=instagram.fkya5-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QHJCVlRH68BcZLG97jc7RdH-9Itj0pFOKDQwAOTO4km9jn0JY9PjzEh0z5YfhRZWU8&_nc_ohc=9TctHqt2uBwQ7kNvgFkZF3e&_nc_gid=0chWUEOqz98z2Vgoop-1gw&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYEwQFePFcbR1sD-hmkWjQKf6dki_vZ8layNZD-DQw6IVg&oe=67E788EC&_nc_sid=7d3ac5"
+                },
+                "is_unpublished": false,
+                "id": "7201703963",
+                "latest_reel_media": 0,
+                "has_profile_pic": null,
+                "profile_pic_genai_tool_info": [],
+                "biography": "TÜBİTAK ULAKBİM'e ait resmi hesaptır.",
+                "full_name": "DergiPark",
+                "is_verified": false,
+                "show_account_transparency_details": true,
+                "account_type": 2,
+                "follower_count": 8179,
+                "mutual_followers_count": 0,
+                "profile_context_links_with_user_ids": [],
+                "address_street": "",
+                "city_name": "",
+                "is_business": true,
+                "zip": "",
+                "biography_with_entities": {
+                    "entities": []
+                },
+                "category": "",
+                "should_show_category": true,
+                "account_badges": [],
+                "ai_agent_type": null,
+                "fb_profile_bio_link_web": null,
+                "external_lynx_url": "https://l.instagram.com/?u=https%3A%2F%2Fanket.tubitak.gov.tr%2Findex.php%2F581289%3Flang%3Dtr%26fbclid%3DPAZXh0bgNhZW0CMTEAAaYjtJtjC6vdPAK2nbMmExY1WD8LbZGoGDtUgHxnGZUbDIW71hHsLuRAgO0_aem_YJHBE5HTd2XmC9yapFlChQ&e=AT3L8eEkDqKlyLHriOiANdIR9Z9nAxqVuoKG4yoKsdn8_GdRkVBPC_ExONtSX6LJIeMjx2KVmiG6FaI4WrACHKfsSUEiCoUexQTvQQ",
+                "external_url": "https://anket.tubitak.gov.tr/index.php/581289?lang=tr",
+                "pronouns": [],
+                "transparency_label": null,
+                "transparency_product": null,
+                "has_chaining": true,
+                "remove_message_entrypoint": false,
+                "fbid_v2": "17841407438890212",
+                "is_embeds_disabled": false,
+                "is_professional_account": null,
+                "following_count": 10,
+                "media_count": 157,
+                "total_clips_count": null,
+                "latest_besties_reel_media": 0,
+                "reel_media_seen_timestamp": null
+            },
+            "viewer": {
+                "user": {
+                    "pk": "4869396170",
+                    "id": "4869396170",
+                    "can_see_organic_insights": true
+                }
+            }
+        },
+        "extensions": {
+            "is_final": true
+        },
+        "status": "ok"
+    },
+    "data": "variables=%7B%22id%22%3A%227201703963%22%2C%22render_surface%22%3A%22PROFILE%22%7D&server_timestamps=true&doc_id=28812098038405011",
+    "headers": {
+        "cookie": "sessionid=4869396170%3AciGHKX1gTAqG8f%3A1%3AAYe_gYJUn120zWIa_pV4qqIbmtr3PhF5Op8XZC2s-dM"
+    }
+}

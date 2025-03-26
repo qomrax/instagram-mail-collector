@@ -1,10 +1,10 @@
-// src/logging/logger.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { createLogger, format, transports, Logger as WinstonLogger } from 'winston';
 import { LogEntity } from './log.entity';
 import { CorrelationService } from './correlation/correlation.service';
+import { EnvService } from 'src/env/env.service';
 
 @Injectable()
 export class LogService {
@@ -21,7 +21,9 @@ export class LogService {
                 format.json(),
             ),
             transports: [
-                new transports.Console(),
+                new transports.Console({
+                    silent: true
+                }),
             ],
         });
     }
@@ -39,6 +41,21 @@ export class LogService {
         await this.logRepository.save(log);
 
         this.logger.info(`[${correlationId}] ${serviceName}.${methodName} called with: ${JSON.stringify(args)}`);
+    }
+
+    async logBackgroundJob(jobName: string, args: any = null): Promise<void> {
+        const correlationId = this.correlationService.getCorrelationId();
+
+        const log = new LogEntity();
+        log.correlationId = correlationId;
+        log.level = 'info';
+        log.serviceName = 'BackgroundJob';
+        log.methodName = jobName;
+        log.request = args ? JSON.stringify(args) : null;
+
+        await this.logRepository.save(log);
+
+        this.logger.info(`[${correlationId}] Background job ${jobName} started with args: ${JSON.stringify(args)}`);
     }
 
     async logMethodExit(serviceName: string, methodName: string, result: any): Promise<void> {

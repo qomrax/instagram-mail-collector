@@ -1,0 +1,16 @@
+{
+    "errors": [
+        {
+            "message": "execution error",
+            "path": [
+                "xdt_api__v1__discover__chaining"
+            ],
+            "severity": "CRITICAL"
+        }
+    ],
+    "data": null,
+    "extensions": {
+        "is_final": true
+    },
+    "status": "ok"
+}

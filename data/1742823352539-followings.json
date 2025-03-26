@@ -1,0 +1,24 @@
+{
+    "response": {
+        "errors": [
+            {
+                "message": "execution error",
+                "code": 4630001,
+                "summary": "Bad Request",
+                "description": "Invalid target user.",
+                "path": [
+                    "highlights"
+                ],
+                "extensions": {
+                    "additional_info_do_not_use_except_for_migration": "{\"message\":\"Invalid target user.\",\"status\":\"fail\"}"
+                },
+                "severity": "CRITICAL"
+            }
+        ],
+        "data": null,
+        "extensions": {
+            "is_final": true
+        },
+        "status": "ok"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "response": {
+        "errors": [
+            {
+                "message": "execution error",
+                "severity": "CRITICAL"
+            }
+        ],
+        "data": null,
+        "status": "ok"
+    },
+    "data": "variables=%7B%22id%22%3A%227201703963%22%2C%22render_surface%22%3A%22PROFIL%22%7D&server_timestamps=true&doc_id=28812098038405011",
+    "headers": {
+        "cookie": "sessionid=4869396170%3AciGHKX1gTAqG8f%3A1%3AAYe_gYJUn120zWIa_pV4qqIbmtr3PhF5Op8XZC2s-dM"
+    }
+}

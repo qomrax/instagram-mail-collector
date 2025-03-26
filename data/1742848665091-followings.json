@@ -1,0 +1,104 @@
+{
+    "response": {
+        "data": {
+            "user": {
+                "friendship_status": {
+                    "following": false,
+                    "blocking": false,
+                    "is_feed_favorite": false,
+                    "outgoing_request": false,
+                    "followed_by": false,
+                    "incoming_request": false,
+                    "is_restricted": false,
+                    "is_bestie": false,
+                    "muting": false,
+                    "is_muting_reel": false
+                },
+                "gating": null,
+                "is_memorialized": false,
+                "is_private": false,
+                "has_story_archive": null,
+                "supervision_info": null,
+                "is_regulated_c18": false,
+                "regulated_news_in_locations": [],
+                "bio_links": [
+                    {
+                        "image_url": "",
+                        "is_pinned": false,
+                        "link_type": "external",
+                        "lynx_url": "https://l.instagram.com/?u=https%3A%2F%2Fanket.tubitak.gov.tr%2Findex.php%2F581289%3Flang%3Dtr%26fbclid%3DPAZXh0bgNhZW0CMTEAAaZdZqAKxaWtP7Pp34aTIwsPdTSH1hLi7CKDOW46fqaiu4-cuX2RfGRgQ0Y_aem_6tOPaH8SGPxL4PAJlHtuow&e=AT2lsbk-R6_ZPh2LCw3715-heemWBPl_NJKavpq3-3S7P9vqK06vZWs3k4Slrq2ALX4BUD_SWIEPBZYfB1LTYf1eSmB0UPo18IBrZw",
+                        "media_type": "none",
+                        "title": "Anket",
+                        "url": "https://anket.tubitak.gov.tr/index.php/581289?lang=tr"
+                    }
+                ],
+                "text_post_app_badge_label": null,
+                "show_text_post_app_badge": null,
+                "username": "dergipark",
+                "text_post_new_post_count": null,
+                "pk": "7201703963",
+                "live_broadcast_visibility": null,
+                "live_broadcast_id": null,
+                "profile_pic_url": "https://instagram.fkya5-1.fna.fbcdn.net/v/t51.2885-19/468121113_860165372959066_7318843590956148858_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=instagram.fkya5-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QGiEosR7INzYw1varVUbx7pFG10ZSLcSvmSejNHE8wOhbm6TWaFPrvnJIt5-hTMT-s&_nc_ohc=9TctHqt2uBwQ7kNvgFkZF3e&_nc_gid=DbPjtqpBZ0sCT8LCoUvyrA&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYHdfq2lwyaqeeffBJoX1ShiWF49rgns0SGoQuSq9eU_rw&oe=67E788EC&_nc_sid=7d3ac5",
+                "hd_profile_pic_url_info": {
+                    "url": "https://instagram.fkya5-1.fna.fbcdn.net/v/t51.2885-19/468121113_860165372959066_7318843590956148858_n.jpg?_nc_ht=instagram.fkya5-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QGiEosR7INzYw1varVUbx7pFG10ZSLcSvmSejNHE8wOhbm6TWaFPrvnJIt5-hTMT-s&_nc_ohc=9TctHqt2uBwQ7kNvgFkZF3e&_nc_gid=DbPjtqpBZ0sCT8LCoUvyrA&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYFWRKQuCBGp2o73yW-nuEM5MraCU86aCh3YlzPp9Ys0Zg&oe=67E788EC&_nc_sid=7d3ac5"
+                },
+                "is_unpublished": false,
+                "id": "7201703963",
+                "latest_reel_media": 0,
+                "has_profile_pic": null,
+                "profile_pic_genai_tool_info": [],
+                "biography": "TÜBİTAK ULAKBİM'e ait resmi hesaptır.",
+                "full_name": "DergiPark",
+                "is_verified": false,
+                "show_account_transparency_details": true,
+                "account_type": 2,
+                "follower_count": 8179,
+                "mutual_followers_count": 0,
+                "profile_context_links_with_user_ids": [],
+                "address_street": "",
+                "city_name": "",
+                "is_business": true,
+                "zip": "",
+                "biography_with_entities": {
+                    "entities": []
+                },
+                "category": "",
+                "should_show_category": true,
+                "account_badges": [],
+                "ai_agent_type": null,
+                "fb_profile_bio_link_web": null,
+                "external_lynx_url": "https://l.instagram.com/?u=https%3A%2F%2Fanket.tubitak.gov.tr%2Findex.php%2F581289%3Flang%3Dtr%26fbclid%3DPAZXh0bgNhZW0CMTEAAaZdZqAKxaWtP7Pp34aTIwsPdTSH1hLi7CKDOW46fqaiu4-cuX2RfGRgQ0Y_aem_6tOPaH8SGPxL4PAJlHtuow&e=AT2lsbk-R6_ZPh2LCw3715-heemWBPl_NJKavpq3-3S7P9vqK06vZWs3k4Slrq2ALX4BUD_SWIEPBZYfB1LTYf1eSmB0UPo18IBrZw",
+                "external_url": "https://anket.tubitak.gov.tr/index.php/581289?lang=tr",
+                "pronouns": [],
+                "transparency_label": null,
+                "transparency_product": null,
+                "has_chaining": true,
+                "remove_message_entrypoint": false,
+                "fbid_v2": "17841407438890212",
+                "is_embeds_disabled": false,
+                "is_professional_account": null,
+                "following_count": 10,
+                "media_count": 157,
+                "total_clips_count": null,
+                "latest_besties_reel_media": 0,
+                "reel_media_seen_timestamp": null
+            },
+            "viewer": {
+                "user": {
+                    "pk": "4869396170",
+                    "id": "4869396170",
+                    "can_see_organic_insights": true
+                }
+            }
+        },
+        "extensions": {
+            "is_final": true
+        },
+        "status": "ok"
+    },
+    "data": "av=17841404925108674&__d=www&__user=0&__a=1&__req=4&__hs=20171.HYP%3Ainstagram_web_pkg.2.1...1&dpr=3&__ccg=GOOD&__rev=1021187908&__s=uw9m0d%3Awiurls%3Ajizo71&__hsi=7485477306373527234&__dyn=7xeUjG1mxu1syUbFp41twpUnwgU7SbzEdF8aUco2qwJxS0DU2wx609vCwjE1EE2Cw8G11wBz81s8hwGxu786a3a1YwBgao6C0Mo2swtUd8-U2zxe2GewGw9a361qw8Xxm16wUwtE1wEbUGdG1QwTU9UaQ0Lo6-3u2WE5B08-269wr86C1mwPwUQp1yUb8jK5V8aUuwm8jxK2K0P8KmUhw&__csr=igrgjneR6shTSBPJ95IXmyGBRHG-AV4Jai8LiAnLWSV95nupVKGGlmAZ5hFV8zWAp6VHnByuqeAxjGnSilipWAHjHhWqABDABGiWyV-UKfKqeCy5Vprhp8NoLzVe8K48gyoWlm9QUlVVkVFV9UC48NV8CbyFbmqh3oFa6pEiyeqvx2fCxOdz801bkyw7Vg0Da0xUkG541po4q4yo2Cw16O08Qw5aw19R0GCwLx74iH40cFx9e0iIE0Cu0i8M4qdmnx62ng453VEuw3WVUCywkA20hefG2a2Uw06FG0sq0p-&__comet_req=7&fb_dtsg=NAcMdSpy4xBv0tLdrcy7pWVkvHPLJNCJfFDDBdQ6iBOlIpkL4RWW6sg%3A17864863018060157%3A1737419604&jazoest=26291&lsd=4Yp9fpYaTVgfH2fsHid5fY&__spin_r=1021187908&__spin_b=trunk&__spin_t=1742848499&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=PolarisProfilePageContentQuery&variables=%7B%22id%22%3A%227201703963%22%2C%22render_surface%22%3A%22PROFILE%22%7D&server_timestamps=true&doc_id=28812098038405011",
+    "headers": {
+        "cookie": "datr=7NRWZ7L1bfsrRoxosjvQeMDX; ig_did=2E5B39FD-6A5D-4B5F-AE83-EF07D4F4B9E5; ig_nrcb=1; ps_l=1; ps_n=1; ds_user_id=4869396170; csrftoken=y7HltqS9rasEO8sE5p89BWOSW9EWsTzd; mid=Z7IR0AAEAAER4wL7r8B54wvdiPF-; dpr=2.5; sessionid=4869396170%3AciGHKX1gTAqG8f%3A1%3AAYe_gYJUn120zWIa_pV4qqIbmtr3PhF5Op8XZC2s-dM; rur=\"NCG\\0544869396170\\0541774384491:01f790397cbb6f87ad5f56fc4e51a3d2b8ede8bd0dd8d48f1738043098ca7751c8161653\"; wd=508x769"
+    }
+}

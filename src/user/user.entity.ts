@@ -1,10 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column, Unique, OneToOne } from 'typeorm';
 import { Exclude } from 'class-transformer';
-@Entity()
+@Entity("User")
 @Unique(['email'])
-export class User {
+export class UserEntity {
     @PrimaryGeneratedColumn()
-    ID: number;
+    id: number;
 
     @Column()
     email: string;

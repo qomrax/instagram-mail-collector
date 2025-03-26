@@ -214,6 +214,142 @@
           "users"
         ]
       }
+    },
+    "/api/test": {
+      "get": {
+        "operationId": "ApiController_test",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Api"
+        ]
+      }
+    },
+    "/email/test": {
+      "post": {
+        "operationId": "EmailController_test",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Email"
+        ]
+      }
+    },
+    "/email/emails": {
+      "post": {
+        "operationId": "EmailController_emails",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaginationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns paginated list of emails"
+          }
+        },
+        "tags": [
+          "Email"
+        ]
+      }
+    },
+    "/email/email": {
+      "post": {
+        "operationId": "EmailController_email",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Email"
+        ]
+      }
+    },
+    "/account/test": {
+      "post": {
+        "operationId": "AccountController_test",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Account"
+        ]
+      }
+    },
+    "/account/accounts": {
+      "post": {
+        "operationId": "AccountController_accounts",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaginationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns paginated list of accounts"
+          }
+        },
+        "tags": [
+          "Account"
+        ]
+      }
+    },
+    "/account/account/{username}": {
+      "get": {
+        "operationId": "AccountController_account",
+        "parameters": [
+          {
+            "name": "username",
+            "required": true,
+            "in": "path",
+            "description": "Username of the account to retrieve",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Account"
+        ]
+      }
     }
   },
   "info": {
@@ -225,7 +361,7 @@
   "tags": [],
   "servers": [
     {
-      "url": "http://localhost:3000/"
+      "url": "http://localhost:3004/"
     }
   ],
   "components": {
@@ -297,6 +433,47 @@
       "UpdateUserDto": {
         "type": "object",
         "properties": {}
+      },
+      "PaginationDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "description": "Page number",
+            "example": 1
+          },
+          "limit": {
+            "type": "number",
+            "description": "Number of items per page",
+            "example": 10
+          },
+          "sortMode": {
+            "type": "string",
+            "enum": [
+              "ASC",
+              "DESC"
+            ],
+            "description": "Sorting direction",
+            "example": "ASC",
+            "default": "ASC"
+          }
+        },
+        "required": [
+          "page",
+          "limit",
+          "sortMode"
+        ]
+      },
+      "EmailDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email"
+        ]
       }
     }
   }

@@ -1,0 +1,28 @@
+{
+    "response": {
+        "errors": [
+            {
+                "message": "execution error",
+                "path": [
+                    "xdt_api__v1__discover__chaining"
+                ],
+                "severity": "CRITICAL"
+            }
+        ],
+        "data": null,
+        "extensions": {
+            "is_final": true
+        },
+        "status": "ok"
+    },
+    "data": {
+        "variables": {
+            "module": "profile",
+            "target_id": "10153455091"
+        },
+        "doc_id": 8787138138058098
+    },
+    "headers": {
+        "cookie": "sessionid=65743269184"
+    }
+}

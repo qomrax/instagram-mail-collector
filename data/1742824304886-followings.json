@@ -1,0 +1,71 @@
+{
+    "response": {
+        "errors": [
+            {
+                "message": "execution error",
+                "severity": "CRITICAL"
+            },
+            {
+                "message": "execution error",
+                "severity": "CRITICAL"
+            }
+        ],
+        "data": null,
+        "status": "ok"
+    },
+    "data": {
+        "av": 17841404925108674,
+        "__d": "www",
+        "__user": 0,
+        "__a": 1,
+        "__req": 7,
+        "__hs": "20171.HYP:instagram_web_pkg.2.1...1",
+        "dpr": 2,
+        "__ccg": "EXCELLENT",
+        "__rev": 1021182012,
+        "__s": "s4zv9t:hqbrm1:quejqm",
+        "__hsi": 7485370289381671000,
+        "__dyn": "7xe5WwlEnwn8K2Wmm1twpUnwgU7S6EdF8aUco38w5ux609vCwjE1EE2Cw8G11wBw5Zx62G3i1ywOwa90Fw4Hw9O0Lbwae4UaEW2G0AEco5G0zEnwhE0Caazo7u1xwIwbS1LwTwKG0hq1Iwqo5q1IQp1yU426V8aUuwm8jxK2K0P8Km5o",
+        "__csr": "jgnMV5NsYJi9sKyiRWjA-XGp6Zvnl4l7QqFFebyBHHpbAm8AUjxiFbDDZ93byujAHzpktrAiDrFfDHKl7DK59WwlUnDyqyU4idwCUWiU99udzk4QicxC5U9omDy-2i15zporwSxe00iLMwco1O40e0oeoco2zw1Ga0te0fJwio4K4U3dAgKqi0fDwfQMft2EJ1a04Sojwt9FEl5BgCl00qYU0H2",
+        "__comet_req": 7,
+        "fb_dtsg": "NAcMNRQBE8A-7cRS98xbFdDYr29VoQJPTKAkI047sGmfL8yi1MzOtgg:17864863018060157:1737419604",
+        "jazoest": 25979,
+        "lsd": "_z3oObmaZ7TEX2_hDwKeaQ",
+        "__spin_r": 1021182012,
+        "__spin_b": "trunk",
+        "__spin_t": 1742823582,
+        "fb_api_caller_class": "RelayModern",
+        "fb_api_req_friendly_name": "PolarisProfileSuggestedUsersWithPreloadableQuery",
+        "variables": {
+            "module": "profile",
+            "target_id": "10153455091"
+        },
+        "server_timestamps": true,
+        "doc_id": 8787138138058098
+    },
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "en,tr-TR;q=0.9,tr;q=0.8,en-US;q=0.7",
+        "content-type": "application/x-www-form-urlencoded",
+        "priority": "u=1, i",
+        "sec-ch-prefers-color-scheme": "light",
+        "sec-ch-ua": "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"",
+        "sec-ch-ua-full-version-list": "\"Chromium\";v=\"134.0.6998.118\", \"Not:A-Brand\";v=\"24.0.0.0\", \"Google Chrome\";v=\"134.0.6998.118\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-model": "\"\"",
+        "sec-ch-ua-platform": "macOS",
+        "sec-ch-ua-platform-version": "\"15.2.0\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "x-asbd-id": "359341",
+        "x-bloks-version-id": "e7c968a852c20a5809af0f132c00310b0f6e633456328181b298a8955b4764e8",
+        "x-csrftoken": "y7HltqS9rasEO8sE5p89BWOSW9EWsTzd",
+        "x-fb-friendly-name": "PolarisProfileSuggestedUsersWithPreloadableQuery",
+        "x-fb-lsd": "_z3oObmaZ7TEX2_hDwKeaQ",
+        "x-ig-app-id": "936619743392459",
+        "cookie": "datr=7NRWZ7L1bfsrRoxosjvQeMDX; ig_did=2E5B39FD-6A5D-4B5F-AE83-EF07D4F4B9E5; ig_nrcb=1; ps_l=1; ps_n=1; ds_user_id=4869396170; csrftoken=y7HltqS9rasEO8sE5p89BWOSW9EWsTzd; mid=Z7IR0AAEAAER4wL7r8B54wvdiPF-; sessionid=4869396170%3AciGHKX1gTAqG8f%3A1%3AAYdlJWKIdrOmbVsE5Vzv2esEaoKs_SKs3EIt8Fksr0g; dpr=1.25; wd=700x794; rur=\"LDC\\0544869396170\\0541774359575:01f7802dedbd075e21918b40dff55d73acc11c384c54150f1bacfc868c936f759b1a23dd\"",
+        "Referer": "https://www.instagram.com/geniuskender/",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+    }
+}
