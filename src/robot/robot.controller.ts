@@ -89,5 +89,4 @@ export class RobotController {
         const foundedSessions = await this.robotService.sessions(userEntity)
         return foundedSessions
     }
-
 }
