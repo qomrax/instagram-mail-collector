@@ -1,4 +1,3 @@
-import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { EnvService } from 'src/env/env.service';
 import { EnvModule } from 'src/env/env.module';
@@ -14,6 +13,8 @@ import { ApiModule } from './api/api.module';
 import { EmailModule } from './email/email.module';
 import { RobotModule } from './robot/robot.module';
 import { CommonModule } from './common/common.module';
+import { Module } from '@nestjs/common';
+
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({

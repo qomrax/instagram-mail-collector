@@ -4,8 +4,7 @@ import { Repository } from 'typeorm';
 import { createLogger, format, transports, Logger as WinstonLogger } from 'winston';
 import { LogEntity } from './log.entity';
 import { CorrelationService } from './correlation/correlation.service';
-import { EnvService } from 'src/env/env.service';
-
+import * as CircularJSON from "circular-json"
 @Injectable()
 export class LogService {
     private logger: WinstonLogger;
@@ -36,11 +35,11 @@ export class LogService {
         log.level = 'info';
         log.serviceName = serviceName;
         log.methodName = methodName;
-        log.request = JSON.stringify(args);
+        log.request = CircularJSON.stringify(args);
 
         await this.logRepository.save(log);
 
-        this.logger.info(`[${correlationId}] ${serviceName}.${methodName} called with: ${JSON.stringify(args)}`);
+        this.logger.info(`[${correlationId}] ${serviceName}.${methodName} called with: ${CircularJSON.stringify(args)}`);
     }
 
     async logBackgroundJob(jobName: string, args: any = null): Promise<void> {
@@ -51,11 +50,11 @@ export class LogService {
         log.level = 'info';
         log.serviceName = 'BackgroundJob';
         log.methodName = jobName;
-        log.request = args ? JSON.stringify(args) : null;
+        log.request = args ? CircularJSON.stringify(args) : null;
 
         await this.logRepository.save(log);
 
-        this.logger.info(`[${correlationId}] Background job ${jobName} started with args: ${JSON.stringify(args)}`);
+        this.logger.info(`[${correlationId}] Background job ${jobName} started with args: ${CircularJSON.stringify(args)}`);
     }
 
     async logMethodExit(serviceName: string, methodName: string, result: any): Promise<void> {
@@ -66,11 +65,11 @@ export class LogService {
         log.level = 'info';
         log.serviceName = serviceName;
         log.methodName = methodName;
-        log.response = JSON.stringify(result);
+        log.response = CircularJSON.stringify(result);
 
         await this.logRepository.save(log);
 
-        this.logger.info(`[${correlationId}] ${serviceName}.${methodName} returned: ${JSON.stringify(result)}`);
+        this.logger.info(`[${correlationId}] ${serviceName}.${methodName} returned: ${CircularJSON.stringify(result)}`);
     }
 
     async logError(serviceName: string, methodName: string, args: any, error: Error): Promise<void> {
@@ -81,8 +80,8 @@ export class LogService {
         log.level = 'error';
         log.serviceName = serviceName;
         log.methodName = methodName;
-        log.request = JSON.stringify(args);
-        log.error = JSON.stringify({
+        log.request = CircularJSON.stringify(args);
+        log.error = CircularJSON.stringify({
             message: error.message,
             stack: error.stack,
         });

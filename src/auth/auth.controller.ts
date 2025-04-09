@@ -3,7 +3,6 @@ import { AuthService } from 'src/auth/auth.service';
 import { LocalAuthGuard } from 'src/auth/guards/local.guard';
 import { LoginDto } from '../user/dto/login.dto';
 import { ApiBody, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { JwtAuthGuard } from 'src/auth/guards/jwt.guard';
 import { IsUserLogged } from 'src/auth/dto/check.dto';
 import { JwtAuth } from 'src/auth/decorators/jwt.decorator';
 import { LogService } from 'src/log/log.service';

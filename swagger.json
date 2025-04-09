@@ -350,6 +350,131 @@
           "Account"
         ]
       }
+    },
+    "/robot/start-session/{sessionId}": {
+      "post": {
+        "operationId": "RobotController_startSession",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MultipeRunningSessionException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT-auth": []
+          }
+        ],
+        "tags": [
+          "Robot"
+        ]
+      }
+    },
+    "/robot/create-session/{sessionId}": {
+      "post": {
+        "operationId": "RobotController_createSession",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT-auth": []
+          }
+        ],
+        "tags": [
+          "Robot"
+        ]
+      }
+    },
+    "/robot/stop-session/{sessionId}": {
+      "post": {
+        "operationId": "RobotController_stopSession",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItsNotRunningException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT-auth": []
+          }
+        ],
+        "tags": [
+          "Robot"
+        ]
+      }
     }
   },
   "info": {
@@ -383,12 +508,12 @@
         "properties": {
           "email": {
             "type": "string",
-            "example": "user@example.com",
+            "example": "user@mail.com",
             "description": "User email address"
           },
           "password": {
             "type": "string",
-            "example": "yourpassword",
+            "example": "password123!",
             "description": "User password"
           }
         },
@@ -473,6 +598,50 @@
         },
         "required": [
           "email"
+        ]
+      },
+      "MultipeRunningSessionException": {
+        "type": "object",
+        "properties": {}
+      },
+      "SessionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "status"
+        ]
+      },
+      "ItsNotRunningException": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "It's not running, you can't stop."
+          },
+          "name": {
+            "type": "string",
+            "example": "its-not-running"
+          }
+        },
+        "required": [
+          "message",
+          "name"
         ]
       }
     }

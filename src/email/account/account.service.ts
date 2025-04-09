@@ -34,14 +34,20 @@ export class AccountService {
         });
     }
 
-    public async insertFollowers(username: string, followers: string[]): Promise<AccountEntity> {
-        const followerEntities = await Promise.all(followers.map(async follower => {
+    public async addFollowings(username: string, followings: string[]): Promise<AccountEntity> {
+        const followerEntities = await Promise.all(followings.map(async follower => {
             return await this.createOrFindAccount(follower)
         }))
         const account = await this.createOrFindAccount(username)
         account.followings = [...account.followings, ...followerEntities]
         await this.accountRepository.save(account)
-        return await this.findAccount(username, true)
+        return await this.accountRepository.findOne({
+            where: {
+                username
+            },
+            relations: ["followings"]
+        })
+
     }
 
     public async setTrueAccountCheckStatus(username: string): Promise<AccountEntity> {

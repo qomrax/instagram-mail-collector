@@ -1,6 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable, CreateDateColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable, CreateDateColumn, JoinColumn } from "typeorm";
 import { EmailEntity } from "../email.entity";
-
+import { SessionEntity } from "src/robot/session/session.entity";
 @Entity("Account")
 export class AccountEntity {
     @PrimaryGeneratedColumn()
@@ -31,4 +31,7 @@ export class AccountEntity {
 
     @CreateDateColumn()
     createdAt: Date;
+
+    @ManyToMany(() => SessionEntity, session => session.accounts)
+    sessions: SessionEntity[]
 }
