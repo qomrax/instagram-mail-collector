@@ -1,4 +1,4 @@
-import { Controller, Param, Post, Get } from '@nestjs/common';
+import { Controller, Param, Post, Get, NotFoundException } from '@nestjs/common';
 import { RobotService } from './robot.service';
 import { JwtAuth } from 'src/auth/decorators/jwt.decorator';
 import { GetUser } from 'src/user/decorators/get-user-id.decorator';
@@ -8,6 +8,7 @@ import { ApiBadRequestResponse, ApiParam, ApiResponse } from '@nestjs/swagger';
 import { SessionPipe } from './session/session.pipe';
 import { SessionDto } from './session/session.dto';
 import { ClosedWithErrorException, ItsNotRunningException, MultipeRunningSessionException, ThisSessionAlreadyRunningException } from './session/session.error';
+import { SessionStatusENUM } from './session/session.enum';
 
 @Controller('robot')
 export class RobotController {
@@ -39,16 +40,16 @@ export class RobotController {
 
 
     @JwtAuth()
-    @Post("create-session/:sessionId")
+    @Post("create-session/:startAccountUsername")
     @ApiParam({
-        name: "sessionId",
-        type: Number
+        name: "startAccountUsername",
+        type: String
     })
     @ApiResponse({
         type: SessionDto
     })
-    async createSession(@GetUser() userEntity: UserEntity) {
-        return await this.robotService.createSession(userEntity)
+    async createSession(@GetUser() userEntity: UserEntity, @Param("startAccountUsername") startAccountUsername: string) {
+        return await this.robotService.createSession(userEntity, startAccountUsername)
     }
 
     @JwtAuth()
@@ -88,5 +89,21 @@ export class RobotController {
     async sessions(@GetUser() userEntity: UserEntity,) {
         const foundedSessions = await this.robotService.sessions(userEntity)
         return foundedSessions
+    }
+
+    @JwtAuth()
+    @Get("active-session")
+    @ApiResponse({ type: SessionDto })
+    async runningSession(@GetUser() userEntity: UserEntity) {
+        const sessiontEntity = new SessionEntity()
+        sessiontEntity.status = SessionStatusENUM.RUNNING
+        sessiontEntity.user = userEntity;
+
+        const activeSession = await this.robotService.sessionService.querySession(sessiontEntity)
+        if (!activeSession) {
+            throw new NotFoundException("Session Not Foound!")
+        }
+
+        return activeSession
     }
 }

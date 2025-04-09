@@ -25,11 +25,12 @@ export class RobotService {
         private emailService: EmailService,
         private accountService: AccountService,
         private userService: UserService,
-        private sessionService: SessionService
+        public sessionService: SessionService
     ) { }
 
-    async createSession(userEntity: UserEntity) {
-        const createdSession = await this.sessionService.createSession(userEntity)
+    async createSession(userEntity: UserEntity, startAccountUsername: string) {
+        const accountEntity = await this.accountService.createOrFindAccount(startAccountUsername);
+        const createdSession = await this.sessionService.createSession(userEntity, accountEntity)
         return createdSession
     }
 
@@ -44,11 +45,7 @@ export class RobotService {
     }
 
     async sessions(userEntity: UserEntity) {
-        const foundedSessions = await this.sessionService.sessionRepository.find({
-            where: {
-                user: userEntity
-            }
-        })
+        const foundedSessions = await this.sessionService.findSessions(userEntity)
         return foundedSessions
     }
 

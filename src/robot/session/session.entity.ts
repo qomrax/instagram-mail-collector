@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { UserEntity } from "src/user/user.entity";
 import { AccountEntity } from "src/email/account/account.entity";
 import { EmailEntity } from "src/email/email.entity";
@@ -13,6 +13,10 @@ export class SessionEntity {
     @JoinColumn({ name: "user_id" })
     user: UserEntity
 
+    @ManyToOne(() => AccountEntity)
+    @JoinColumn({ name: "start_account_id" })
+    startAccount: AccountEntity
+
     @ManyToMany(() => AccountEntity, account => account.sessions)
     @JoinTable()
     accounts: AccountEntity[]
@@ -25,16 +29,7 @@ export class SessionEntity {
     createdAt: Date;
 
     @Column({ type: String, default: "CREATED" })
-    private _status: string = "CREATED";
-
-    get status(): string {
-        return this._status;
-    }
-
-    set status(newStatus: string) {
-        console.log(`Session ${this.id} status changed: ${this._status} → ${newStatus}`);
-        this._status = newStatus;
-    }
+    status: string = "CREATED";
 
     @Column({ type: String, nullable: true })
     error: string
@@ -47,4 +42,3 @@ export class SessionEntity {
         return this.status === SessionStatusENUM.ERROR
     }
 }
-

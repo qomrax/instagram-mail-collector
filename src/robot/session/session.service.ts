@@ -15,9 +15,10 @@ export class SessionService {
     ) {
     }
 
-    public async createSession(userEntity: UserEntity) {
+    public async createSession(userEntity: UserEntity, accountEntity: AccountEntity) {
         const sessionEntity = new SessionEntity()
         sessionEntity.user = userEntity;
+        sessionEntity.startAccount = accountEntity;
         return await this.sessionRepository.save(sessionEntity);
     }
 
@@ -76,6 +77,25 @@ export class SessionService {
             where: {
                 id: sessionId
             }
+        })
+    }
+
+    public async findSessions(userEntity: UserEntity): Promise<SessionEntity[]> {
+        const foundedSessions = await this.sessionRepository.find({
+            where: {
+                user: userEntity
+            },
+            order: { status: "DESC", createdAt: "DESC" },
+
+            relations: ["startAccount"]
+        })
+        return foundedSessions
+    }
+
+    public async querySession(sessionEntity: SessionEntity) {
+        return await this.sessionRepository.findOne({
+            where: sessionEntity,
+            relations: ["startAccount"]
         })
     }
 }

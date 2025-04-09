@@ -396,16 +396,16 @@
         ]
       }
     },
-    "/robot/create-session/{sessionId}": {
+    "/robot/create-session/{startAccountUsername}": {
       "post": {
         "operationId": "RobotController_createSession",
         "parameters": [
           {
-            "name": "sessionId",
+            "name": "startAccountUsername",
             "required": true,
             "in": "path",
             "schema": {
-              "type": "number"
+              "type": "string"
             }
           }
         ],
@@ -525,6 +525,32 @@
                   "items": {
                     "$ref": "#/components/schemas/SessionDto"
                   }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT-auth": []
+          }
+        ],
+        "tags": [
+          "Robot"
+        ]
+      }
+    },
+    "/robot/active-session": {
+      "get": {
+        "operationId": "RobotController_runningSession",
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionDto"
                 }
               }
             }
