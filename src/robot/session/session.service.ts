@@ -11,7 +11,7 @@ import { ClosedWithErrorException, ItsNotRunningException, MultipeRunningSession
 export class SessionService {
     constructor(
         @InjectRepository(SessionEntity)
-        private sessionRepository: Repository<SessionEntity>,
+        public sessionRepository: Repository<SessionEntity>,
     ) {
     }
 

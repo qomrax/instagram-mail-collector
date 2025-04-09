@@ -1,4 +1,4 @@
-import { Controller, Param, Post } from '@nestjs/common';
+import { Controller, Param, Post, Get } from '@nestjs/common';
 import { RobotService } from './robot.service';
 import { JwtAuth } from 'src/auth/decorators/jwt.decorator';
 import { GetUser } from 'src/user/decorators/get-user-id.decorator';
@@ -67,6 +67,27 @@ export class RobotController {
         return await this.robotService.stopSession(sessionEntity)
     }
 
+    @JwtAuth()
+    @Get("session/:sessionId")
+    @ApiParam({
+        name: "sessionId",
+        type: Number
+    })
+    @ApiResponse({
+        type: SessionDto
+    })
+    async session(@Param('sessionId', SessionPipe) sessionEntity: SessionEntity) {
+        return sessionEntity
+    }
 
+    @JwtAuth()
+    @Get("sessions")
+    @ApiResponse({
+        type: [SessionDto]
+    })
+    async sessions(@GetUser() userEntity: UserEntity,) {
+        const foundedSessions = await this.robotService.sessions(userEntity)
+        return foundedSessions
+    }
 
 }

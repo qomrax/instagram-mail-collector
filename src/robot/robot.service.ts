@@ -43,6 +43,15 @@ export class RobotService {
         return stoppedSession
     }
 
+    async sessions(userEntity: UserEntity) {
+        const foundedSessions = await this.sessionService.sessionRepository.find({
+            where: {
+                user: userEntity
+            }
+        })
+        return foundedSessions
+    }
+
     private async addEmails(sessionEntity: SessionEntity, emails: string[], accountUsername: string) {
         const emailEntities = await this.emailService.addEmails(emails, accountUsername)
         return await this.sessionService.linkEmails(sessionEntity, emailEntities)
